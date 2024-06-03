@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>博客部署回顾 | Swan&#39;land</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="在经过三四天的折腾之后，总算完成了个人博客的初步搭建，包括本地部署Hexo，推送至个人 GitHub 仓库。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客部署回顾">
+<meta property="og:url" content="http://example.com/2024/06/03/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%9B%9E%E9%A1%BE/index.html">
+<meta property="og:site_name" content="Swan&#39;land">
+<meta property="og:description" content="在经过三四天的折腾之后，总算完成了个人博客的初步搭建，包括本地部署Hexo，推送至个人 GitHub 仓库。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-06-03T12:04:19.000Z">
+<meta property="article:modified_time" content="2024-06-03T12:10:47.133Z">
+<meta property="article:author" content="Swan">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Swan'land" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Swan&#39;land</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-博客部署回顾" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/06/03/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%9B%9E%E9%A1%BE/" class="article-date">
+  <time class="dt-published" datetime="2024-06-03T12:04:19.000Z" itemprop="datePublished">2024-06-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      博客部署回顾
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在经过三四天的折腾之后，总算完成了个人博客的初步搭建，包括本地部署Hexo，推送至个人 GitHub 仓库。</p>
+<span id="more"></span>
+
+<h2 id="本地化部署-Hexo"><a href="#本地化部署-Hexo" class="headerlink" title="本地化部署 Hexo"></a>本地化部署 Hexo</h2><p>下载git、node、hexo<br>创建博客路径:myblog<br>本地初始化hexo<br>hexo s:hexo本地启动命令<br>打开localhost:4000查看本地Hexo是否正常</p>
+<h2 id="推送GitHub"><a href="#推送GitHub" class="headerlink" title="推送GitHub"></a>推送GitHub</h2><p>首先配置 sshkey<br>①进入~&#x2F;.ssh<br>②执行ssh-keygen -t rsa -C “GitHub 绑定邮箱”<br>③cat rsa.pub 查看 sshkey<br>④进入 GitHub &gt;set&gt;配置 sshkey<br>测试 GitHub 的 ssh连通性<br>$$ ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#101;&#x65;&#46;&#99;&#x6f;&#109;">&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#101;&#x65;&#46;&#99;&#x6f;&#109;</a><br>⑤在 myblog目录内修改_config.yml的发布（deploy ）配置<br>deploy :<br>#Deployment## Docs: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deploymentdeploy">https://hexo.io/docs/one-command-deploymentdeploy</a>:<br>  type: git<br>  repo: <a href="mailto:&#x67;&#x69;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#109;">&#x67;&#x69;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#109;</a>:GitHub 名称&#x2F; GitHub 仓库名称.git<br>  branch: main<br>⑥推送到 GitHub的 git信息配置<br>git config –global user.name “yourname”<br>git config –global user.email “youremail”<br>⑦按照 deployer-git<br>npm install hexo-deployer-git –save<br>⑧将本地 blog 推送至 GitHub<br>sudo hexo c   #清除缓存文件 db.json 和已生成的静态文件 public<br>sudo hexo g   #生成网站静态文件到默认设置的 public 文件夹(hexo generate 的缩写)<br>sudo hexo d   #自动生成网站静态文件，并部署到设定的仓库(hexo deploy 的缩写)</p>
+<h2 id="后续日常更新-blog-和发布"><a href="#后续日常更新-blog-和发布" class="headerlink" title="后续日常更新 blog 和发布"></a>后续日常更新 blog 和发布</h2><p>⓪写 blog<br>#生成一个空白的 blog文件<br>#hexo new <title><br>#例如：sudo hexo new “月报（2024.4-2024.5）”<br>#进入source&#x2F;posts进行 blog 的编写<br>①预览本地 blog<br>#sudo hexo s<br>②生成静态文件<br>#sudo hexo g<br>③部署到 GitHub<br>#sudo hexo d</p>
+<h2 id="部署参考阅读文章"><a href="#部署参考阅读文章" class="headerlink" title="部署参考阅读文章"></a>部署参考阅读文章</h2><p>①<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2337246">使用Hexo从0到1搭建个人博客详细教程（超详细，超简单）</a><br>②<a target="_blank" rel="noopener" href="https://www.cnblogs.com/jenkin1991/p/9604054.html">git@github.com: Permission denied (publickey). fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/06/03/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%9B%9E%E9%A1%BE/" data-id="clwyxjcok0001u8q314858sqg" data-title="博客部署回顾" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/06/03/%E6%9C%88%E6%8A%A5%EF%BC%882024-4-2024-5%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">月报（2024.4-2024.5）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">六月 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/06/03/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%9B%9E%E9%A1%BE/">博客部署回顾</a>
+          </li>
+        
+          <li>
+            <a href="/2024/06/03/%E6%9C%88%E6%8A%A5%EF%BC%882024-4-2024-5%EF%BC%89/">月报（2024.4-2024.5）</a>
+          </li>
+        
+          <li>
+            <a href="/2024/06/01/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Swan<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
